@@ -42,6 +42,7 @@ type
     Label1: TLabel;
     Button10: TButton;
     edtb: TEdit;
+    Button11: TButton;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);

@@ -356,9 +356,17 @@ object principal: Tprincipal
     Left = 8
     Top = 150
     Width = 94
-    Height = 27
+    Height = 21
     TabOrder = 14
     Visible = False
+  end
+  object Button11: TButton
+    Left = 104
+    Top = 32
+    Width = 75
+    Height = 25
+    Caption = 'Button11'
+    TabOrder = 15
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer
