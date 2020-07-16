@@ -360,6 +360,14 @@ object principal: Tprincipal
     TabOrder = 14
     Visible = False
   end
+  object Button11: TButton
+    Left = 115
+    Top = 31
+    Width = 75
+    Height = 25
+    Caption = 'Button11'
+    TabOrder = 15
+  end
   object Timer1: TTimer
     OnTimer = Timer1Timer
     Left = 230
