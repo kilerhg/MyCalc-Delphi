@@ -2,10 +2,11 @@ object principal: Tprincipal
   Left = 1371
   Top = 309
   BiDiMode = bdLeftToRight
+  BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Calculadora'
-  ClientHeight = 232
-  ClientWidth = 243
+  ClientHeight = 162
+  ClientWidth = 290
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,36 +20,6 @@ object principal: Tprincipal
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
-  object Label3: TLabel
-    Left = 109
-    Top = 94
-    Width = 15
-    Height = 25
-    Alignment = taCenter
-    AutoSize = False
-    BiDiMode = bdRightToLeftNoAlign
-    Caption = '='
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -21
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentBiDiMode = False
-    ParentFont = False
-  end
-  object Label4: TLabel
-    Left = 147
-    Top = 69
-    Width = 69
-    Height = 19
-    Caption = 'Resultado'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -16
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
-  end
   object Label6: TLabel
     Left = 6
     Top = 8
@@ -99,16 +70,15 @@ object principal: Tprincipal
     Font.Style = []
     ParentFont = False
   end
-  object Label1: TLabel
-    Left = 53
-    Top = 54
-    Width = 12
+  object lhistorico: TLabel
+    Left = 180
+    Top = 72
+    Width = 3
     Height = 13
-    Caption = 'n1'
   end
   object Button1: TButton
-    Left = 213
-    Top = 371
+    Left = 386
+    Top = 94
     Width = 25
     Height = 25
     Caption = '+'
@@ -118,13 +88,13 @@ object principal: Tprincipal
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
-    TabOrder = 0
+    TabOrder = 3
     Visible = False
     OnClick = Button1Click
   end
   object edt1: TEdit
-    Left = 8
-    Top = 73
+    Left = 375
+    Top = 205
     Width = 95
     Height = 27
     Alignment = taCenter
@@ -134,12 +104,12 @@ object principal: Tprincipal
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
-    TabOrder = 1
-    OnExit = edt1Exit
+    TabOrder = 4
+    Visible = False
   end
   object edt2: TEdit
-    Left = 9
-    Top = 73
+    Left = 375
+    Top = 172
     Width = 94
     Height = 27
     Alignment = taCenter
@@ -150,12 +120,12 @@ object principal: Tprincipal
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
-    TabOrder = 2
-    OnExit = edt2Exit
+    TabOrder = 5
+    Visible = False
   end
   object Button2: TButton
-    Left = 237
-    Top = 371
+    Left = 417
+    Top = 94
     Width = 25
     Height = 25
     Caption = '-'
@@ -165,13 +135,13 @@ object principal: Tprincipal
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
-    TabOrder = 3
+    TabOrder = 6
     Visible = False
     OnClick = Button2Click
   end
   object Button3: TButton
-    Left = 257
-    Top = 371
+    Left = 448
+    Top = 94
     Width = 25
     Height = 25
     Caption = '/'
@@ -181,13 +151,13 @@ object principal: Tprincipal
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
-    TabOrder = 4
+    TabOrder = 7
     Visible = False
     OnClick = Button3Click
   end
   object Button4: TButton
-    Left = 278
-    Top = 371
+    Left = 479
+    Top = 94
     Width = 25
     Height = 25
     Caption = '*'
@@ -197,13 +167,13 @@ object principal: Tprincipal
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
-    TabOrder = 5
+    TabOrder = 8
     Visible = False
     OnClick = Button4Click
   end
   object edtresult: TEdit
-    Left = 130
-    Top = 94
+    Left = 165
+    Top = 91
     Width = 105
     Height = 33
     Alignment = taCenter
@@ -214,21 +184,21 @@ object principal: Tprincipal
     Font.Style = []
     ParentFont = False
     ReadOnly = True
-    TabOrder = 6
+    TabOrder = 9
   end
   object Button6: TButton
-    Left = 228
-    Top = 456
+    Left = 276
+    Top = 464
     Width = 75
     Height = 25
     Caption = '0 a 100'
-    TabOrder = 7
+    TabOrder = 10
     Visible = False
     OnClick = Button6Click
   end
   object ComboBox1: TComboBox
     Left = 8
-    Top = 106
+    Top = 112
     Width = 95
     Height = 27
     AutoDropDown = True
@@ -239,7 +209,7 @@ object principal: Tprincipal
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
-    TabOrder = 8
+    TabOrder = 1
     Text = 'Operador'
     OnChange = ComboBox1Change
     Items.Strings = (
@@ -252,8 +222,8 @@ object principal: Tprincipal
       '%')
   end
   object Button8: TButton
-    Left = 53
-    Top = 183
+    Left = 375
+    Top = 125
     Width = 129
     Height = 41
     Caption = 'Calcular'
@@ -263,29 +233,31 @@ object principal: Tprincipal
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
-    TabOrder = 9
+    TabOrder = 11
+    Visible = False
     OnClick = Button8Click
   end
   object Button7: TButton
-    Left = 231
-    Top = 197
+    Left = 279
+    Top = 205
     Width = 75
     Height = 25
     Caption = 'Button7'
-    TabOrder = 10
+    TabOrder = 12
     Visible = False
     OnClick = Button7Click
   end
   object Panel1: TPanel
-    Left = 20
-    Top = 236
+    Left = 36
+    Top = 205
     Width = 196
     Height = 417
     Color = clWhite
     Ctl3D = True
     ParentBackground = False
     ParentCtl3D = False
-    TabOrder = 11
+    TabOrder = 13
+    Visible = False
     object Label5: TLabel
       Left = 42
       Top = 3
@@ -334,54 +306,78 @@ object principal: Tprincipal
     end
   end
   object Button9: TButton
-    Left = 248
-    Top = 228
+    Left = 296
+    Top = 236
     Width = 75
     Height = 25
     Caption = 'Button9'
-    TabOrder = 12
+    TabOrder = 14
     Visible = False
     OnClick = Button9Click
   end
   object Button10: TButton
-    Left = 147
-    Top = 144
-    Width = 75
-    Height = 25
-    Caption = 'Button10'
-    TabOrder = 13
+    Left = 112
+    Top = 86
+    Width = 47
+    Height = 40
+    Caption = '='
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -27
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 2
     OnClick = Button10Click
   end
   object edtb: TEdit
-    Left = 8
-    Top = 150
+    Left = 9
+    Top = 79
     Width = 94
-    Height = 21
-    TabOrder = 14
-    Visible = False
+    Height = 27
+    Alignment = taCenter
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
   end
   object Button11: TButton
-    Left = 115
-    Top = 31
+    Left = 16
+    Top = 160
     Width = 75
     Height = 25
-    Caption = 'Button11'
+    Caption = 'Copiar'
     TabOrder = 15
+    Visible = False
+    OnClick = Button11Click
+    OnExit = Button11Exit
+  end
+  object Button12: TButton
+    Left = 165
+    Top = 160
+    Width = 88
+    Height = 25
+    Caption = 'Salvar em .txt'
+    TabOrder = 16
+    Visible = False
+    OnClick = Button12Click
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer
-    Left = 230
-    Top = 408
+    Left = 278
+    Top = 416
   end
   object Timer2: TTimer
     Interval = 100
-    OnTimer = Timer2Timer
-    Left = 270
-    Top = 408
+    Left = 318
+    Top = 416
   end
   object PopupMenu1: TPopupMenu
-    Left = 264
-    Top = 304
+    Left = 312
+    Top = 312
     object EsconderHistorico1: TMenuItem
       Caption = 'Esconder Historico'
       OnClick = EsconderHistorico1Click
