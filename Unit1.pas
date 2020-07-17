@@ -42,6 +42,7 @@ type
     lhistorico: TLabel;
     Button11: TButton;
     Button12: TButton;
+    Button13: TButton;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);

@@ -365,6 +365,14 @@ object principal: Tprincipal
     Visible = False
     OnClick = Button12Click
   end
+  object Button13: TButton
+    Left = 168
+    Top = 24
+    Width = 75
+    Height = 25
+    Caption = 'Button13'
+    TabOrder = 17
+  end
   object Timer1: TTimer
     OnTimer = Timer1Timer
     Left = 278
